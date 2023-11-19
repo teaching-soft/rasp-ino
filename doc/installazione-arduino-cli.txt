@@ -1,0 +1,2 @@
+Installare arduino con
+sudo apt install arduino

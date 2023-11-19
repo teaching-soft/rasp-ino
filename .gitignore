@@ -1,0 +1,7 @@
+*.lib
+*.a
+*.o
+*.img
+*.zip
+*.log
+*.old
