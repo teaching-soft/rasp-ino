@@ -1,0 +1,17 @@
+# Va messo in
+# /etc/systemd/system/ips-send.service
+# ricaricare le info sui servizi sudo systemctl daemon-reload
+# deve essere abilitato con sudo systemctl enable ips-send.service
+# Avviarlo per vedere se funziona
+
+[Unit]
+Description=Invia gli indirizzi ip ad un canale Telegram
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/ips-send.sh <GROUP_ID> <BOT_TOKEN>
+
+
+[Install]
+WantedBy=default.target

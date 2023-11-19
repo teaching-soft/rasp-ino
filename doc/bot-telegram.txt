@@ -1,0 +1,3 @@
+Per non dover cercare l'indirizzo ip della raspberry è presente uno script
+che invia un messaggio ad un canale telegram, lo scrip viene lanciato all'avviamento, dopo i servizi di rete 
+Controllare gli script per le autorizzazioni del canale
