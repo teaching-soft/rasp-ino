@@ -3,6 +3,7 @@
 # ricaricare le info sui servizi sudo systemctl daemon-reload
 # deve essere abilitato con sudo systemctl enable ips-send.service
 # Avviarlo per vedere se funziona
+# Sostituire <GROUP_ID> <BOT_TOKEN> con quelli corretti
 
 [Unit]
 Description=Invia gli indirizzi ip ad un canale Telegram
