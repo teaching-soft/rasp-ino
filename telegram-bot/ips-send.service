@@ -5,11 +5,13 @@
 
 [Unit]
 Description=Invia gli indirizzi ip ad un canale Telegram
-After=network.target
+After=networking.service 
 
 [Service]
 Type=simple
 ExecStart=/usr/local/bin/ips-send.sh 
+RestartSec=50
+Restart=on-failure
 
 [Install]
 WantedBy=default.target
