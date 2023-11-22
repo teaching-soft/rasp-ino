@@ -1,1 +1,13 @@
- 
+Semplici script per leggere una temperatura (tramite un lm25) ad arduino, trasferirla su un rasberry (mysql) 
+e renderla disponibile tramite un server web (apache)
+
+Ricordarsi di
+0) Installare Apache, mysql, php, arduino [qualora si desideri modificare il codice e ricaricarlo sull'atmega128p]
+1) Far processare i file html da php
+	Aggiungere AddType application/x-httpd-php .html in
+	/etc/apache2/sites-available/000-default.conf
+2) Creare un bot su telegram [con relativi groupid e token]
+	se si desidera ricevere un msg con l'ip della Rpi []qualora sia configurata con dhcp]
+3) Copiare i file *.service in /etc/systemd/system, abilitarli con systemctl enable xxxx
+4) Copiare i file per il bot e quello per leggere i dati di arduino in /usr/local/bin 
+5) Copiare il file index.html in /var/www/html

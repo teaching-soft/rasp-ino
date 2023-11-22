@@ -1,6 +1,6 @@
 <?php
 	// Apertura porta seriale
-	$fp = fopen("/dev/ttyUSB0","w+");
+	$fp = fopen("/dev/ttyACM0","w+");
 	if(!$fp){
 		echo "Porta seriale non aperta";
 		die();
@@ -44,18 +44,6 @@
 		}
 
 	}
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ?>
