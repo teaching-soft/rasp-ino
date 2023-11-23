@@ -21,7 +21,7 @@
 		// Prende la data di sistema
 		date_default_timezone_set('Europe/Rome');
 		$data = date("Y/m/d");
-		$time = date("H:i");
+		$time = date("H:i:s");
 		/*$query = "INSERT INTO temperature_tbl (date,time,temperature) VALUES ('" .
 				$data . "','" . $time . "','" . $value . "');\n";
 		echo $query;*/

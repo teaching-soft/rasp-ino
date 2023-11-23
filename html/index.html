@@ -2,16 +2,19 @@
 <head>
 	<meta http-equiv="refresh" content="5">
 	<title>PAGINA DI RECUPERO DEI DATI DEL SENSORE DI TEMPERATURA</title>
+	<link rel="stylesheet" href="index.css">
 </head>
 <body>
-<div id="header" style="text-align:center">
-<h1>PAGINA DI RECUPERO DEI DATI DEL SENSORE DI TEMPERATURA</h1>
+	
+<div class="contenitore">
+<img src=header-gv.png>
 </div>
+<h1>PAGINA DI RECUPERO DEI DATI DEL SENSORE DI TEMPERATURA</h1>
 <DIV id="content" style="text-align:center">
-<TABLE border="1px" style="margin: 0 auto;">
+<TABLE class="redTable">
 <CAPTION>ULTIMI 10 VALORI</CAPTION>
 <TR>
-<TD>ID DATO</TD><TD>DATE</TD><TD>TIME</TD><TD>TEMP °C</TD>
+<TH>ID DATO</TH><TH>DATE</TH><TH>TIME</TH><TH>TEMP °C</TH>
 </TR>
 <?php
    try {
@@ -42,6 +45,7 @@
 
 </TABLE>
 </DIV>
+
 </body>
 
 </html>
