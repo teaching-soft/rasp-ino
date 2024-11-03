@@ -1,6 +1,8 @@
 <?php
 	// Apertura porta seriale
-	$fp = fopen("/dev/ttyACM0","w+");
+	// Evetualmente per configurare la porta seriale
+	// exec("stty -F /dev/ttyACM0 9600 cs8 -cstopb -parenb");
+	$fp = fopen("/dev/ttyACM0","r");
 	if(!$fp){
 		echo "Porta seriale non aperta";
 		die();
@@ -11,6 +13,8 @@
 		$buffer = "";
 		// Legge una riga
 		$buffer = fgets($fp, 15);
+		//echo $buffer;
+		//continue;
 		// Controlla che ci sia tutto il dato
 		if(strpos($buffer,"[") === false) continue;
 		if(strpos($buffer,"]") === false) continue;
@@ -30,11 +34,9 @@
 			$db_handle = new PDO($connect_string, 'user_temperature_db', 'password_temperature_db');
 			$query = "INSERT INTO temperature_tbl (date,time,temperature) VALUES ('" .
 				$data . "','" . $time . "','" . $value . "');";
-			
 			$rq = $db_handle->prepare($query);
 			$result = $rq->execute();
-			echo "Ho inserito:" . $query . "\n";	
-
+			echo "Ho inserito:" . $query . "\n";
 
 		}
 
@@ -44,6 +46,5 @@
 		}
 
 	}
-
 
 ?>

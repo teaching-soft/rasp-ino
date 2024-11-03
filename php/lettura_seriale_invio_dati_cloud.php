@@ -4,8 +4,9 @@ define ('SERVER_NAME','ec2-100-26-110-52.compute-1.amazonaws.com');
 define ('SERVER_PORT','5000');
 
 	// PROGRAMMA PRINCIPALE
-	// Controllo sulla porta seriale
-	$fp =fopen("/dev/ttyACM0", "w+");
+	// Evetualmente per configurare la porta seriale
+	// exec("stty -F /dev/ttyACM0 9600 cs8 -cstopb -parenb");
+	$fp =fopen("/dev/ttyACM0", "r");
 	if( !$fp) {
 		echo "Error";
 		die();
