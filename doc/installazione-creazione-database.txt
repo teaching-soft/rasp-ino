@@ -4,6 +4,9 @@ $sudo mysql -u root -p
 # Creazion db
 mariaDB> CREATE DATABASE temperature_db;
 
+# Passa al db creato
+MariaDB [(none)]> use temperature_db;
+
 # Creazione tabella
 mariaDB>CREATE TABLE temperature_tbl (id INT NOT NULL AUTO_INCREMENT, date VARCHAR(15), time VARCHAR (15), temperature VARCHAR(15), PRIMARY KEY (id) );
 
