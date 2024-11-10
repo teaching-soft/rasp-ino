@@ -26,10 +26,9 @@
         $db_code_handle->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
         // Imposta la query di inserimento in una stringa aggiungendo i valori arrivati
         $query = "SELECT * FROM temperature_tbl ORDER BY id DESC LIMIT 10";
-        // Comunica al server db di preparare la query
+        // Esegue la query
         $result = $db_code_handle->query($query);
-        // Gli dice di eseguirla
-        //$result = $sth->execute();
+	// Estrae i risultati   
         while($row = $result->fetch()) //{
 			echo "<TR><TD>" . $row['id'] . "</TD><TD>" . $row['date'] . "</TD><TD>" . 
 				$row['time'] . "</TD><TD>" . $row['temperature'] . "</TD></TR>";
